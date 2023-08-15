@@ -87,6 +87,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (resultCode == RESULT_CANCELED){
                     Toast.makeText(MainActivity.this, "cancelado",Toast.LENGTH_SHORT).show();
                 }
+                else {
+                    Log.d("TESTE", "teste");
+                }
             }
         }
     }
