@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">Facebook</string>
+    <string name="app_name" translatable="false">Facebook</string>
+    <string name="qualquer">Any text</string>
+    <string name="open">Open Browser</string>
+    <string name="sum_close">Sum and Close</string>
+    <string name="oktober" translatable="false">Oktoberfest</string>
+    <string name="click_here">Click Here!</string>
+    <string name="no_click_here">Do not click here!</string>
+    <string name="click_here_sometimes">Click here sometimes!</string>
+    <string name="maybe_click_here">Maybe click here!</string>
 </resources>

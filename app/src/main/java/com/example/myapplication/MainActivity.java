@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView txtRotulo;
+    ActivityResultLauncher<Intent> activityLauncher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnQuatro.setOnClickListener(this);
 
         txtRotulo = findViewById(R.id.txtRotulo);
+
+        activityLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK) {
+                        Intent data = result.getData();
+                        int somatoriaTelaAnterior = data.getIntExtra("soma", 0);
+                        Toast.makeText(MainActivity.this, String.valueOf(somatoriaTelaAnterior), Toast.LENGTH_SHORT).show();
+                    }
+                    else {  //RESULT_CANCELED
+                        Toast.makeText(MainActivity.this, "cancelado",Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     public void eventoClique1(View view) {
@@ -59,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("chave", true);
                 intent.putExtra("valor1", 1);
                 intent.putExtra("valor2", 2);
-                startActivityForResult(intent, 0);
+                activityLauncher.launch(intent);
             }
         }
     }
@@ -76,21 +91,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d("TESTE", "passei pelo onResume!");
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 0) {
-            if (resultCode == RESULT_OK){
-                int somatoriaTelaAnterior = data.getIntExtra("soma", 0);
-                Toast.makeText(MainActivity.this, String.valueOf(somatoriaTelaAnterior), Toast.LENGTH_SHORT).show();
-            }else {
-                if (resultCode == RESULT_CANCELED){
-                    Toast.makeText(MainActivity.this, "cancelado",Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Log.d("TESTE", "teste");
-                }
-            }
-        }
-    }
 }

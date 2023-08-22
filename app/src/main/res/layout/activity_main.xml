@@ -15,31 +15,31 @@
       android:layout_height="wrap_content"
       android:textSize="32sp"
       android:textColor="#007F00"
-      android:text="Oktoberfest" />
+      android:text="@string/oktober" />
 
   <Button
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:onClick="eventoClique1"
-      android:text="Clique aqui!"/>
+      android:text="@string/click_here"/>
 
   <Button
       android:id="@+id/btnDois"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Não Clique aqui!"/>
+      android:text="@string/no_click_here"/>
 
   <Button
       android:id="@+id/btnTres"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Clique aqui as vezes!"/>
+      android:text="@string/click_here_sometimes"/>
 
   <Button
       android:id="@+id/btnQuatro"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:text="Talvez clique aqui!"/>
+      android:text="@string/maybe_click_here"/>
 
 
 

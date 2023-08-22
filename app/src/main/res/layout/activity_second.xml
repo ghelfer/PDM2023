@@ -12,19 +12,24 @@
         android:layout_width="match_parent"
         android:textSize="30sp"
         android:textColor="@color/black"
-        android:text="texto qualquer"
+        android:text="@string/qualquer"
         android:layout_height="wrap_content"/>
 
     <Button
         android:layout_width="match_parent"
-        android:text="Open Brownser"
+        android:text="@string/open"
         android:onClick="openClick"
         android:layout_height="wrap_content"/>
 
     <Button
         android:layout_width="match_parent"
-        android:text="Soma e fecha"
+        android:text="@string/sum_close"
         android:onClick="somaClick"
         android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/microsoft"/>
 
 </LinearLayout>

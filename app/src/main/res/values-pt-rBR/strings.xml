@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="qualquer">texto qualquer</string>
+    <string name="open">Abrir Navegador</string>
+    <string name="sum_close">Soma e fecha</string>
+    <string name="click_here">Clique aqui!</string>
+    <string name="no_click_here">Não Clique aqui!</string>
+    <string name="click_here_sometimes">Clique aqui as vezes!</string>
+    <string name="maybe_click_here">Talvez clique aqui!</string>
+</resources>
