@@ -2,12 +2,17 @@ package com.example.myapplication;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -91,4 +96,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d("TESTE", "passei pelo onResume!");
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        boolean meuMenu = super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.meu_menu, menu );
+        return meuMenu;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+
+        if (item.getItemId() == R.id.item1) {
+            messageBox("Item1 clicado");
+            onBackPressed();
+            return true;
+        } else if (item.getItemId() == R.id.item2) {
+            messageBox("Item2 clicado");
+            System.exit(0);
+            return true;
+        } else if (item.getItemId() == R.id.item3) {
+            Intent intent = new Intent(MainActivity.this, MainActivityChuva.class);
+            startActivity(intent);
+            return true;
+        }
+        return false;
+    }
+
+    private void messageBox(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }
