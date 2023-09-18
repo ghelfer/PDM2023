@@ -133,4 +133,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onBackPressed() {
         super.onBackPressed();
     }
+
+    public void tabelaClick(View view) {
+        Intent intent = new Intent(MainActivity.this, CampActivity.class);
+        startActivity(intent);
+    }
 }

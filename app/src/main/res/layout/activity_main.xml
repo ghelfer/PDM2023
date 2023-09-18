@@ -41,7 +41,11 @@
       android:layout_height="wrap_content"
       android:text="@string/maybe_click_here"/>
 
-
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:onClick="tabelaClick"
+      android:text="Sofre torcedor"/>
 
 
 </LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imgClube"
+        android:layout_width="wrap_content"
+        android:src="@drawable/bot"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtClube"
+        android:gravity="center_vertical"
+        android:layout_width="180dp"
+        android:text="Botachopp"
+        android:layout_height="match_parent"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/txtPts"
+        android:gravity="center_vertical"
+        android:layout_width="35dp"
+        android:text="51"
+        android:layout_height="match_parent"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/txtVit"
+        android:gravity="center_vertical"
+        android:layout_width="35dp"
+        android:text="15"
+        android:layout_height="match_parent"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/txtEmp"
+        android:gravity="center_vertical"
+        android:layout_width="35dp"
+        android:text="15"
+        android:layout_height="match_parent"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/txtDer"
+        android:gravity="center_vertical"
+        android:layout_width="35dp"
+        android:text="15"
+        android:layout_height="match_parent"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/txtJogos"
+        android:gravity="center_vertical"
+        android:layout_width="35dp"
+        android:text="15"
+        android:layout_height="match_parent"
+        android:textSize="24dp" />
+</LinearLayout>
