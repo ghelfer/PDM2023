@@ -114,8 +114,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             onBackPressed();
             return true;
         } else if (item.getItemId() == R.id.item2) {
-            messageBox("Item2 clicado");
-            System.exit(0);
+            Intent intent = new Intent(MainActivity.this, MainActivity6.class);
+            startActivity(intent);
             return true;
         } else if (item.getItemId() == R.id.item3) {
             Intent intent = new Intent(MainActivity.this, MainActivityChuva.class);
