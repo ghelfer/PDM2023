@@ -110,8 +110,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onOptionsItemSelected(item);
 
         if (item.getItemId() == R.id.item1) {
-            messageBox("Item1 clicado");
-            onBackPressed();
+            Intent intent = new Intent(MainActivity.this, DbActivity.class);
+            startActivity(intent);
             return true;
         } else if (item.getItemId() == R.id.item2) {
             Intent intent = new Intent(MainActivity.this, MainActivity6.class);

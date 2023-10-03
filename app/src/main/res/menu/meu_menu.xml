@@ -7,7 +7,7 @@
     <item
         android:id="@+id/item1"
         android:icon="@drawable/baseline_arrow_back_24"
-        android:title="Voltar"
+        android:title="Database"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"/>
 
