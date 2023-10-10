@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.unisc.Calc;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView txtRotulo;
@@ -57,6 +59,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         Toast.makeText(MainActivity.this, "cancelado",Toast.LENGTH_SHORT).show();
                     }
                 });
+
+        int test = Calc.soma(1,2);
+        Toast.makeText(this, test + "", Toast.LENGTH_LONG).show();
     }
 
     public void eventoClique1(View view) {
